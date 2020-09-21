@@ -74,7 +74,7 @@ function App() {
             fullWidth
             id="streetAddress"
             label="Street Address"
-            name="streetAddress"
+            name="street"
             value={formItem.street}
             onChange={handleChange}
             required
@@ -86,7 +86,7 @@ function App() {
             fullWidth
             id="streetAddress2"
             label="Street Address 2"
-            name="streetAddress2"
+            name="street2"
             value={formItem.street2}
             onChange={handleChange}
           />
