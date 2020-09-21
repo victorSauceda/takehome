@@ -1,8 +1,10 @@
 const TwilioSdk = require("twilio");
 // Your Account SID from www.twilio.com/console
-const accountSid = "ACd4b505130da1a6a850be4df1a065a58b";
+const accountSid = process.env.REACT_APP_ACCOUNT_KEY;
+
 // Your Auth Token from www.twilio.com/console
-const authToken = "749f13cb5dd1c72bfb0c4ae9040731ad";
+const authToken = process.env.REACT_APP_AUTH_TOKEN;
+
 // instantiate twilio SDK
 const twilio = new TwilioSdk(accountSid, authToken);
 
@@ -11,6 +13,7 @@ const twilio = new TwilioSdk(accountSid, authToken);
 // use twilio SDK to send text message https://www.twilio.com/docs/libraries/node
 exports.handler = (event, context, callback) => {
   const body = JSON.parse(event.body);
+  console.log("event.body: ", event.body);
 
   const sms = {
     to: body.to,
