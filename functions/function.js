@@ -6,6 +6,8 @@ const authToken = "749f13cb5dd1c72bfb0c4ae9040731ad";
 // instantiate twilio SDK
 const twilio = new TwilioSdk(accountSid, authToken);
 
+///where secret keys should be placed
+
 // use twilio SDK to send text message https://www.twilio.com/docs/libraries/node
 exports.handler = (event, context, callback) => {
   const body = JSON.parse(event.body);
